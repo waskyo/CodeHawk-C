@@ -329,6 +329,7 @@ class AnalysisManager:
             print(args.output)
             print(args)
             exit(1)
+        input("Did one round of AI...")
 
     def generate_and_check_app(self, domains: str, processes: int = 1) -> None:
         """Generate invariants and check proof obligations for application."""

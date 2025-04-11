@@ -254,7 +254,7 @@ class CNRVBaseOffsetValue(CNonRelationalValue):
             ub = self.upperbound
             plb = "<-" if lb is None else "[" + str(lb)
             pub = "->" if ub is None else str(ub) + ")"
-            return "bv:" + str(self.xpr) + ":" + plb + ";" + pub + pcbn
+            return "bv (no offset):" + str(self.xpr) + ":" + plb + ";" + pub + pcbn + f"  lb: {lb} up: {ub} [args: '{self.args}']"
 
 
 @invregistry.register_tag("rs", CNonRelationalValue)
